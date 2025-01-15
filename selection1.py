@@ -21,20 +21,16 @@ def main():
     input_file = "num.100000.4.in"
     output_file = "num.100000.4.out"
     
-    # Ler os números do arquivo
     numbers = read_numbers_from_file(input_file)
     
-    # Iniciar o contador de tempo
     start_time = time.time()
     
-    # Ordenar os números
+
     sorted_numbers = selection_sort(numbers)
     
-    # Parar o contador de tempo
     end_time = time.time()
     elapsed_time = end_time - start_time
     
-    # Escrever os números ordenados no arquivo
     write_numbers_to_file(output_file, sorted_numbers)
     print(f"Números ordenados salvos em '{output_file}'.")
     print(f"Tempo de execução: {elapsed_time:.6f} segundos")
